@@ -1,8 +1,8 @@
 const myArr= [1,2,3,4,5,6]
-// myArr.push(7)
-// myArr.push(8)
-// myArr.pop()
-// myArr.unshift(10)
+myArr.push(7)
+myArr.push(8)
+myArr.pop()
+myArr.unshift(10)
 myArr.shift()
 
 console.log(myArr);
