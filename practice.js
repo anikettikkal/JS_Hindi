@@ -282,11 +282,25 @@
 
 // reduced method for addition of array elements
 
-const myArr = [1,2,4,65,7,4,4,2,234,5,43,32454]
-const newArr = myArr.reduce((acc, curval)=>{
-    return acc+curval
-})
-console.log(newArr);
+// const myArr = [1,2,4,65,7,4,4,2,234,5,43,32454]
+// const newArr = myArr.reduce((acc, curval)=>{
+//     return acc+curval
+// })
+// console.log(newArr);
+
+// promises- basically promise are object in js use to handle the asynchronous operations
+
+// let promise = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         console.log("promise created");
+//         resolve();
+//     },2000)
+// })
+// promise.then(()=>{
+//     console.log("promise consumed");
+    
+// })
+
 
 
 
