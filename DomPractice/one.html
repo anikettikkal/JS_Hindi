@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="parent">
+        <li class="child">aniket</li>
+        <li class="child">pratiksha</li>
+        <li class="child">pradnya</li>
+    </ul>
+</body>
+<script>
+    // style the Element using js
+    // let changeStyle =document.querySelector('#parent')
+    // let style =changeStyle.style.backgroundColor ="yellow"
+    // console.log(style);
+
+    // edit 
+    // let items = document.querySelectorAll(".child");
+    // items[0].innerText = "ANIKET";
+    // items[1].innerHTML = "PRATIKSHA";
+    // items[2].textContent= "PRADNYA"
+    
+    // items[0].style.backgroundColor = "black"
+
+
+    // add new li - only one element added 
+    let ul =document.getElementById('parent')
+    let li =document.createElement('li')
+    li.innerHTML="Gauri"
+    ul.appendChild(li)
+
+    // now we want to add multiple element using function
+    function addElement(liItems){
+        let ul =document.getElementById("parent")
+        let li = document.createElement('li')
+        li.innerHTML =`${liItems}`;
+        ul.appendChild(li)
+    }
+    addElement("mukesh")
+    addElement("sakshi")
+
+    // remove element
+
+    const remove = document.getElementsByClassName("child");
+    remove[2].remove();
+
+    const removeElement = document.querySelector("li:nth-child(2)")
+    removeElement.remove();
+    
+</script>
+</html>

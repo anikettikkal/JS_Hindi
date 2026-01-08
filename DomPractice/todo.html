@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Todo</title>
+</head>
+
+<body>
+
+    <input type="text" id="todoInput" placeholder="Enter todo">
+    <button onclick="addTodo()">Add</button>
+
+    <ul id="parent"></ul>
+
+    <script>
+        function addTodo() {
+            let input = document.getElementById("todoInput");
+            let text = input.value;
+
+            if (text === "") return;
+
+            let li = document.createElement("li");
+            li.innerText = text;
+
+            // EDIT button
+            let editBtn = document.createElement("button");
+            editBtn.innerText = "Edit";
+            editBtn.onclick = function () {
+                let newText = prompt("Edit todo", li.firstChild.textContent);
+                if (newText) li.firstChild.textContent = newText;
+            };
+
+            // DELETE button
+            let deleteBtn = document.createElement("button");
+            deleteBtn.innerText = "Delete";
+            deleteBtn.onclick = function () {
+                li.remove();
+            };
+
+            li.appendChild(editBtn);
+            li.appendChild(deleteBtn);
+
+            document.getElementById("parent").appendChild(li);
+            input.value = "";
+        }
+    </script>
+
+</body>
+
+</html>
