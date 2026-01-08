@@ -140,42 +140,153 @@
 
 //================= functions ==================
 
-const myFunc = function(){
-    console.log("hello world from function expression");
-}
-console.log(myFunc());
+// const myFunc = function(){
+//     console.log("hello world from function expression");
+// }
+// console.log(myFunc());
 
-function addValue(...values){
-    return values;
-}
-const result = addValue(22,34,556,2334);
-console.log(result);
+// function addValue(...values){
+//     return values;
+// }
+// const result = addValue(22,34,556,2334);
+// console.log(result);
 
-function addtocart (val1,val2,...num1){
-    return num1
-}
-console.log(addtocart(200,34,643,353));
-
-
-const newFunc = (val1,val2)=> (val1+val2)
-console.log(newFunc(23,34));
+// function addtocart (val1,val2,...num1){
+//     return num1
+// }
+// console.log(addtocart(200,34,643,353));
 
 
-
-//======= immedietly invoked function expression==============
-
-(function test(){
-    console.log("DB connected");
-})();
+// const newFunc = (val1,val2)=> (val1+val2)
+// console.log(newFunc(23,34));
 
 
 
+// ======= immedietly invoked function expression==============
+
+// (function test(){
+//     console.log("DB connected");
+// })();
+
+//====================== control flow
+
+// const age = 18;
+// if (age==18) {
+//     console.log("user is valid");
+    
+// } else {
+//     console.log("user is not valid");
+// }
+
+// const balance = 5000;
+// if(balance>1000) console.log("balance is maximum");
+
+// const userLoggedIn = true;
+// const paymentMode = false;
+
+// if (userLoggedIn && paymentMode) {
+//     console.log("both are true then ans is :true");
+    
+// } else {
+//     console.log("one is false then ans is :false");
+// }
+
+// nullish coalescing operator and ternary operator
+
+// const age = null;
+// const userAge = age ?? 18;
+// console.log(userAge);
 
 
+// ternary operator
+
+// const score = 45;
+// const result = score>=35 ? "pass": "fail";
+// console.log(result);
+
+// iteration statements break and continue
+
+// for(let a=1; a<=10; a++){
+//     if (a==5) {
+//         console.log("5 detected");
+//         continue;
+//     }
+//     console.log(a);  
+// }
+
+// for of loop
+
+// const myArr = ["aniket","pratiksha","snehal","rahul","sonali"];
+// for(const items of myArr){
+//     console.log(items);
+// }
+
+// map
+// const map = new Map()
+// map.set(1,"aniket")
+// map.set(2,"pratiksha")
+// map.set(3,"snehal")
+// map.set(4,"rahul")
+// map.set(5,"sonali")
+
+// console.log(map);
 
 
+// for(const [key,value] of map){
+//     console.log(key,value);
+// }
 
+// for in loop is use to iterate over object properties
 
+// const myObj ={
+//     name:"aniket",
+//     age:24,
+//     city:"pune",
+//     profession:"developer",
+//     isLoggedIn:true
+// }
+
+// for(const key in myObj){
+//     console.log(key);
+//     console.log(myObj[key]);
+// }
+
+// working of foreach and for of is same 
+
+// const myArr = ["aniket","pratiksha","snehal","rahul","sonali"];
+// myArr.forEach((item)=>{
+//     console.log(item);
+    
+// })
+
+// filter, map , reduce in js
+
+// filter is use to select only one element from array
+
+// const myArr = ["aniket","pratiksha","snehal","rahul","sonali"];
+// const newArr =myArr.filter((item)=>{
+//     return item=="aniket"
+// })
+// console.log(newArr);
+
+// map is use for make the changes in array and print new array
+
+// const mapArr = [1,2,3,4,5,6,7,8]
+
+// const newMapArr = mapArr.map((item)=>{
+//     return item+10
+// }).map((item)=>{
+//     return item*10
+// })
+// console.log(newMapArr);
+
+// reduced method for addition of array elements
+
+const myArr = [1,2,4,65,7,4,4,2,234,5,43,32454]
+const newArr = myArr.reduce((acc, curval)=>{
+    return acc+curval
+})
+console.log(newArr);
 
 
 

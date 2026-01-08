@@ -8,3 +8,5 @@ const sum = myNums.reduce((acc , currval)=>{
     return acc + currval
 },0)
 console.log(sum);
+
+
